@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/mountain.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+}
+
+.header {
+    margin-top: 250px;
+    color: orangered;
+}
+
+.header h1 {
+    font-size: 56px;
+}
+
+.header h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.input-search {
+    position: relative;
+    width: 50%;
+}
+
+input, #location, #search {
+    position: absolute;
+}
+
+#location {
+    left: 10px;
+    top: 15px;
+}
+
+#search {
+    right: 10px;
+    top: 15px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+}
