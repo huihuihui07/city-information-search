@@ -1,72 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-</head>
-
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-    <a class="navbar-brand" href="#">TBC</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#hero">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Us</a>
-        </li>
-      </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3e9c45b2bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Holiday API</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="home-wrapper">
+      <section class="header">
+        <h1>Discover your ideal location destination</h1>
+        <h3>Weather | Attractions | Restaurant</h3>
+      </section>
+      <section class="input-search">
+        <input type="text" placeholder="City and postcode" />
+        <i id="location" class="fa-solid fa-location-dot"></i>
+        <i id="search" class="fa-solid fa-magnifying-glass"></i>
+      </section>
     </div>
-  </nav>
-  
-  <main class="main-container">
-
-    <section id="portfolio" class="text-center">
-      <h1>Discover Your Ideal Vacation Destination!</h1>
-      <img src="./assets/images/photo.png">
-      <p class="about-description">Explore the ultimate vacation spot by 
-        searching for a city! Gain insights into its weather, dining scene, 
-        and top attractions. Whether you're planning a getaway or just curious,
-         our platform helps you find all the details you need to make your holiday 
-        unforgettable.</p>
-      <!-- Your picture and additional information here -->
-    </section>
-
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-        <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">City Info Finder</h1>
-          <p class="col-md-8 fs-4">Explore the ultimate vacation spot by 
-            searching for a city! Gain insights into its weather, dining scene, 
-            and top attractions. Whether you're planning a getaway or just curious,
-             our platform helps you find all the details you need to make your holiday 
-            unforgettable.</p>
-          <button class="btn btn-primary btn-lg" type="button">Search</button>
-        </div>
-    </div>
-
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="#">Terms of Service</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Copyright Notice</a>
-    </div>
-    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-  </footer>
-
-   <!-- Bootstrap JS -->
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-</body>
-
-</html> 
+    <div id="weatherResult"></div>
+    <section class='weather-card-wrapper'></section>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
