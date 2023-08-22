@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <!-- btn -->
+    <button class="btn btn-dark btnRestaurants">Restaurants</button>
+    <!-- search form -->
+
+    <form id="citySearch">
+      <div>
+        <label for="cityName">City</label>
+        <input type="text" id="cityName" />
+      </div>
+      <div>
+        <label for="country">country</label>
+        <input type="text" id="country" />
+      </div>
+
+      <button type="submit">search</button>
+    </form>
+    <!-- cards -->
+  
+      <section
+      id="restaurantList"
+      class="row mt-3"
+      role="region"
+      aria-live="polite"
+    >
+      <!-- <img class="card-img-top" src="..." alt="Card image cap" /> -->
+      <div class="card-body">
+        <!-- <h5 class="restaurantName">Name</h5>
+        <p class="cuisineType">Indian</p>
+        <p class="address">address</p>
+        <p class="phoneNum">phone</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="./script_restaurant_card.js"></script>
+  </body>
+</html>
