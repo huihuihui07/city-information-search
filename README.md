@@ -8,7 +8,7 @@ This repository depicts a web app that gives weather information as per location
 ```md
 - A Holiday app that shows the weather of the desired city to be visited.
 
-  - When a user searches for a city they are presented with current and future conditions for that city and that city.
+  - When a user searches for a city they are presented with current and future conditions for the city
 
   - When a user views the current weather conditions for that city they are presented with:
 
