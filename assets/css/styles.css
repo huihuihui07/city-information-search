@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
+.home-wrapper {
+    height: 100vh;
     background-image: url('../images/mountain.jpg');
     background-size: cover;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,12 +17,12 @@ body {
 }
 
 .header {
-    margin-top: 250px;
     color: orangered;
 }
 
 .header h1 {
     font-size: 56px;
+    text-align: center;
 }
 
 .header h3 {
@@ -46,6 +48,7 @@ input, #location, #search {
 #search {
     right: 10px;
     top: 15px;
+    cursor: pointer;
 }
 
 input {
@@ -53,4 +56,85 @@ input {
     height: 50px;
     border-radius: 30px;
     border: none;
+    text-indent: 40px;
+    font-size: 20px;
 }
+
+.weather-tab {
+    color: red;
+}
+
+.tabs-wrapper div {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 900;
+}
+
+.tabs-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+}
+
+.tabs-wrapper .weather-tab {
+    background-color: rgba(0,0,0,1);
+}
+
+.weather-card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.weather-card {
+    background-color: #66c0d4;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.icon {
+    width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .header h3 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .weather-card {
+        margin: 10px;
+    }
+} 
+
+@media only screen and (min-width: 820px) {
+    .weather-card {
+        margin: 10px;
+        width: 200px;
+        height: 250px;
+    }
+} 
