@@ -1,7 +1,3 @@
-var cityInput = document.getElementById("cityName");
-var countryInput = document.getElementById("country");
-var submitForm = document.getElementById("citySearch");
-
 //restaurant API
 const options = {
   method: "GET",
@@ -11,8 +7,7 @@ const options = {
   },
 };
 
-function runApi(event) {
-  event.preventDefault();
+function restaurantApi() {
   var cityName = cityInput.value;
   var country = countryInput.value;
   console.log(cityName, country);
@@ -76,15 +71,19 @@ function restaurantList(x) {
     });
 }
 
-submitForm.addEventListener("submit", runApi);
+// submitForm.addEventListener("submit", runApi);
 //create cards
 //card container
-let cardContainer = document.querySelector("#restaurantList");
-cardContainer.innerHTML = "";
+
 //proforate items
 
 function produceCard(data) {
   console.log(data);
+  console.log("produceCard works");
+
+  let cardContainer = document.querySelector(".weather-card-wrapper");
+  cardContainer.innerHTML = "";
+
   for (let index = 0; index < 9; index++) {
     // let card = document.querySelector(".card-body");
     let restaurantName = document.createElement("h5");
@@ -94,7 +93,7 @@ function produceCard(data) {
     cuisineType.textContent = `cuisineType: ${data[index].name} `;
 
     let address = document.createElement("div");
-    address.textContent = `address: ${data[index].address}`;
+    address.textContent = `address: ${data[index].address.street}, ${data[index].address.postalCode} `;
 
     let card = document.createElement("div");
     card.classList.add("card-body", "col-2", "p-2", "mx-2");
