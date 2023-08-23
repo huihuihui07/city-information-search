@@ -1,5 +1,5 @@
 //restaurant API
-const options = {
+const optionsRestaurant = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "05d81c5989msh45cb458ac7037cap13e23djsn621d2bb57bd9",
@@ -16,7 +16,7 @@ function restaurantApi() {
       cityName +
       "," +
       country,
-    options
+    optionsRestaurant
   )
     .then(function (response) {
       if (!response.ok) {
@@ -35,7 +35,7 @@ function cityId(x) {
     "https://the-fork-the-spoon.p.rapidapi.com/locations/v2/list?google_place_id=" +
       x +
       "&geo_ref=false&geo_type=locality",
-    options
+    optionsRestaurant
   )
     .then(function (response) {
       if (!response.ok) {
@@ -54,7 +54,7 @@ function restaurantList(x) {
     "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=" +
       x +
       "&pageSize=9&pageNumber=1",
-    options
+    optionsRestaurant
   )
     .then((response) => {
       if (!response.ok) {
@@ -64,33 +64,29 @@ function restaurantList(x) {
     })
     .then((data) => {
       console.log(data); // Process the parsed data
-      produceCard(data.data);
+      produceRestaurantCard(data.data);
     })
     .catch((error) => {
       console.error("Fetch error:", error);
     });
 }
 
-// submitForm.addEventListener("submit", runApi);
 //create cards
-//card container
 
-//proforate items
-
-function produceCard(data) {
+function produceRestaurantCard(data) {
   console.log(data);
   console.log("produceCard works");
-
-  let cardContainer = document.querySelector(".weather-card-wrapper");
+  //card container
+  let cardContainer = document.querySelector(".cardContainer");
   cardContainer.innerHTML = "";
-
+  //proforate items
   for (let index = 0; index < 9; index++) {
     // let card = document.querySelector(".card-body");
     let restaurantName = document.createElement("h5");
     restaurantName.textContent = `Name: ${data[index].name}`;
 
     let cuisineType = document.createElement("div");
-    cuisineType.textContent = `cuisineType: ${data[index].name} `;
+    cuisineType.textContent = `cuisineType: ${data[index].servesCuisine} `;
 
     let address = document.createElement("div");
     address.textContent = `address: ${data[index].address.street}, ${data[index].address.postalCode} `;

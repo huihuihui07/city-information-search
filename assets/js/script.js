@@ -19,6 +19,6 @@ searchIcon.addEventListener("click", function () {
   restaurantsTab.addEventListener("click", restaurantApi);
 
   //click on attractions button
-  // let attractionsTab = document.querySelector(".attractions-tab");
-  // attractionsTab.addEventListener("click", weatherApi);
+  let attractionsTab = document.querySelector(".attractions-tab");
+  attractionsTab.addEventListener("click", attractionsApi);
 });
