@@ -7,7 +7,7 @@ var submitForm = document.querySelector(".citySearch");
 
 //display the 3 icons: attractions, restaurants and weather
 searchIcon.addEventListener("click", function () {
-  let selectionBtnText = `<section class='tabs-wrapper'><button class='btn attractions-tab'>Attractions</button><button class='btn restaurants-tab'>Restaurants</button><button class='weather-tab'>Weather</button></section>`;
+  let selectionBtnText = `<section class='tabs-wrapper'><button class='btn attractions-tab apiButtons'>Attractions</button><button class='btn restaurants-tab apiButtons'>Restaurants</button><button class='weather-tab apiButtons'>Weather</button></section>`;
   selectionButtons.innerHTML = selectionBtnText; // Corrected 'innerHTML'
 
   //click on weather button
