@@ -119,6 +119,10 @@ input .weather-tab {
   width: 100px;
 }
 
+.test {
+  border: 1px solid red;
+}
+
 @media only screen and (max-width: 600px) {
   .header h1 {
     font-size: 32px;
