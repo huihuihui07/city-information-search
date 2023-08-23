@@ -16,8 +16,12 @@
   gap: 75px;
 }
 
+.header h1 {
+  text-shadow: 1px 1px 2px rgba(48, 47, 47, 0.5);
+}
+
 .header {
-  color: orangered;
+  color: rgb(247, 120, 17);
 }
 
 .header h1 {
@@ -29,16 +33,14 @@
   text-align: center;
   font-size: 30px;
   margin-top: 30px;
+  color: #2f3d61;
+  text-shadow: #141414;
+  padding-top: -20px;
 }
 
-/* .input-search {
-    position: relative;
-    width: 50%;
+.col-md-5 {
+  border-color: black;
 }
-
-input, #location, #search {
-    position: absolute;
-} */
 
 #location {
   left: 10px;
@@ -51,16 +53,19 @@ input, #location, #search {
   cursor: pointer;
 }
 
-/* input {
-    width: 50%;
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    text-indent: 40px;
-    font-size: 20px;
-} */
+input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  text-indent: 40px;
+  font-size: 20px;
+  padding: 0px 0px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+}
 
-.weather-tab {
+input .weather-tab {
   color: red;
 }
 
@@ -137,4 +142,15 @@ input, #location, #search {
     width: 200px;
     height: 250px;
   }
+}
+
+.col-md-5 {
+  margin-bottom: 20px;
+  width: 100%; /* Adjust the margin value as needed */
+  box-shadow: #141414;
+  opacity: 0.8;
+}
+
+#home-wrapper {
+  width: 100vh;
 }
