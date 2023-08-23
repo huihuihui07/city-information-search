@@ -8,6 +8,7 @@ const optionsRestaurant = {
 };
 
 function restaurantApi() {
+  clearApi();
   var cityName = cityInput.value;
   var country = countryInput.value;
   console.log(cityName, country);
@@ -81,21 +82,30 @@ function produceRestaurantCard(data) {
   cardContainer.innerHTML = "";
   //proforate items
   for (let index = 0; index < 9; index++) {
-    // let card = document.querySelector(".card-body");
+    let cardBody = document.createElement("div");
+    let restaurantImg = document.createElement("img");
+    restaurantImg.setAttribute("src", data[index].mainPhoto.source);
+    restaurantImg.classList.add("card-img-top", "rounded");
+
     let restaurantName = document.createElement("h5");
-    restaurantName.textContent = `Name: ${data[index].name}`;
+    restaurantName.textContent = `${data[index].name}`;
+    restaurantName.classList.add("card-title");
 
-    let cuisineType = document.createElement("div");
-    cuisineType.textContent = `cuisineType: ${data[index].servesCuisine} `;
+    let cuisineType = document.createElement("p");
+    cuisineType.textContent = `Cuisine: ${data[index].servesCuisine}`;
+    cuisineType.classList.add("card-text");
 
-    let address = document.createElement("div");
-    address.textContent = `address: ${data[index].address.street}, ${data[index].address.postalCode} `;
+    let address = document.createElement("p");
+    address.textContent = `Address: ${data[index].address.street}, ${data[index].address.postalCode} `;
+    address.classList.add("card-text");
 
     let card = document.createElement("div");
-    card.classList.add("card-body", "col-2", "p-2", "mx-2");
-    cardContainer.appendChild(card);
-    card.appendChild(restaurantName);
-    card.appendChild(cuisineType);
-    card.appendChild(address);
+    card.classList.add("card", "col-md-4","mx-3", "my-3", 'rounded', 'p-2' );
+    card.style.width = "25rem";
+
+    cardBody.append(restaurantName, cuisineType, address);
+    card.append(restaurantImg, cardBody)
+
+    cardContainer.append(card);
   }
 }
