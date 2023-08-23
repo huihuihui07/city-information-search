@@ -37,7 +37,7 @@ function weatherApi() {
 
     for (let i = 0; i <= 5; i++) {
       const forecast = forecastList[i];
-      const forecastTemperature = Math.round(forecast.main.temp);
+      const forecastTemperature = Math.round(forecast.main.temp - 273.15);
       const forecastWeatherDescription = forecast.weather[0].description;
       const forecastWeatherIcon = weatherIcons[forecast.weather[0].icon];
       const forecastWeatherIconHtml = `<div class='weather-card'><img src="${forecastWeatherIcon}" class='icon' alt="weather icon">`;
