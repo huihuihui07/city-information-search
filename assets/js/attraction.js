@@ -7,6 +7,7 @@ const optionsAttraction = {
 };
 //get lattitude and longitude of city
 function attractionsApi() {
+  clearApi();
   fetch(
     "https://opentripmap-places-v1.p.rapidapi.com/en/places/geoname?name=" +
       cityInput.value,
@@ -68,7 +69,14 @@ function produceAttractionsCard(data) {
 
     //create card element
     let card = document.createElement("div");
-    card.classList.add("card", "border", "col-md-4");
+    card.classList.add("card", "col-md-4");
+
+    let wiki = document.createElement("a");
+    wiki.setAttribute("href", 'https://www.wikidata.org/wiki/'+ data[index].properties.wikidata);
+    wiki.setAttribute('target', "_blank")
+    wiki.classList.add("btn", "btn-primary");
+    wiki.textContent = "WIKI PAGE";
+
     //create card-body element
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
@@ -78,5 +86,6 @@ function produceAttractionsCard(data) {
     cardBody.appendChild(attractionsName);
     cardBody.appendChild(attractionType);
     cardBody.appendChild(attractionRating);
+    cardBody.appendChild(wiki);
   }
 }

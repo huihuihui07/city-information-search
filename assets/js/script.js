@@ -22,3 +22,13 @@ searchIcon.addEventListener("click", function () {
   let attractionsTab = document.querySelector("#attractions-btn");
   attractionsTab.addEventListener("click", attractionsApi);
 });
+
+
+//clear contents in the api container
+function clearApi(){
+  let cardContainer = document.querySelector(".cardContainer");
+  cardContainer.innerHTML = "";
+
+  let weatherContainer = document.querySelector( ".weather-card-wrapper");
+  weatherContainer.innerHTML = "";
+}

@@ -22,6 +22,7 @@ const weatherIcons = {
   "50n": iconBaseUrl + "50n.png",
 };
 function weatherApi() {
+  clearApi();
   let apiKey = "0ed58c658d00ae18f106a86b10fb1f7d";
   const location = cityInput.value;
   let queryUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}`;
@@ -38,10 +39,11 @@ function weatherApi() {
     for (let i = 0; i <= 5; i++) {
       const forecast = forecastList[i];
       const forecastTemperature = Math.round(forecast.main.temp - 273.15);
+
       const forecastWeatherDescription = forecast.weather[0].description;
       const forecastWeatherIcon = weatherIcons[forecast.weather[0].icon];
       const forecastWeatherIconHtml = `<div class='weather-card'><img src="${forecastWeatherIcon}" class='icon' alt="weather icon">`;
-      cards += `${forecastWeatherIconHtml}<p>${forecastTemperature}K<p>${forecastWeatherDescription}</p></div>`;
+      cards += `${forecastWeatherIconHtml}<p>${forecastTemperature}°C<p>${forecastWeatherDescription}</p></div>`;
     }
     // Display forecast
     $(".weather-card-wrapper").html(cards);
