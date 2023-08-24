@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This repository depicts a Travel app designed specifically to help someone who is planning or deciding where they wish to visit next. The App provdes you details about local places to eat as well as popular tourist attraction to visit; and to top it all off, it even shows you what the weather will be like for the next 6 days!
+This repository depicts a Travel app designed specifically to help someone who is planning or deciding where they wish to visit next. The App provides you details about local places to eat as well as popular tourist attraction to visit; and to top it all off, it even shows you what the weather will be like for the next 6 days!
 
 that gives weather information as per location searched
 (dynamically) [Weather API](https://openweathermap.org/) to retrieve data of the weather outlook for the current day as well as the five following days after. One can input as many cities as required and it will produce the weather details.
@@ -18,7 +18,7 @@ that gives weather information as per location searched
     - The temperature
     - Weather description
 
-It is a responsive ie can be viewed on mobile and larger screens.
+It is responsive i.e can be viewed on mobile and larger screens.
 ```
 
 ## Table of Contents
