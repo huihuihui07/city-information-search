@@ -42,9 +42,18 @@
   border-color: black;
 }
 
+#city-search-wrapper {
+  position: relative;
+}
+
+#search, #location {
+  position: absolute;
+}
+
 #location {
   left: 10px;
   top: 15px;
+  z-index: 10;
 }
 
 #search {
