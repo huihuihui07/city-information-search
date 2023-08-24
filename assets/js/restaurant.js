@@ -2,14 +2,14 @@
 const optionsRestaurant = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "05d81c5989msh45cb458ac7037cap13e23djsn621d2bb57bd9",
+    "X-RapidAPI-Key": "26087fc143mshf45d24529395bc2p1ab297jsn8a66a300f485",
     "X-RapidAPI-Host": "the-fork-the-spoon.p.rapidapi.com",
   },
 };
 
 function restaurantApi() {
   clearApi();
-  document.querySelector('.weather-card-wrapper').classList.add('hide')
+  document.querySelector(".weather-card-wrapper").classList.add("hide");
   var cityName = cityInput.value;
   var country = countryInput.value;
   console.log(cityName, country);
@@ -99,13 +99,13 @@ function produceRestaurantCard(data) {
     let address = document.createElement("p");
     address.textContent = `Address: ${data[index].address.street}, ${data[index].address.postalCode} `;
     address.classList.add("card-text");
- //create card element
+    //create card element
     let card = document.createElement("div");
-    card.classList.add("card", "col-md-4","mx-3", "my-3", 'rounded', 'p-2' );
+    card.classList.add("card", "col-md-4", "mx-3", "my-3", "rounded", "p-2");
     card.style.width = "25rem";
 
     cardBody.append(restaurantName, cuisineType, address);
-    card.append(restaurantImg, cardBody)
+    card.append(restaurantImg, cardBody);
 
     cardContainer.append(card);
   }
