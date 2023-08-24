@@ -121,6 +121,7 @@ input .weather-tab {
   color: red;
 }
 
+
 /* .tabs-wrapper div {
     width: 100px;
     height: 40px;
@@ -175,6 +176,9 @@ input .weather-tab {
   border: 1px solid red;
 }
 
+.hide{
+  display: none
+}
 @media only screen and (max-width: 600px) {
   .header h1 {
     font-size: 32px;

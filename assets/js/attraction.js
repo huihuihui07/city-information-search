@@ -8,6 +8,7 @@ const optionsAttraction = {
 //get lattitude and longitude of city
 function attractionsApi() {
   clearApi();
+  document.querySelector('.weather-card-wrapper').classList.add('hide')
   fetch(
     "https://opentripmap-places-v1.p.rapidapi.com/en/places/geoname?name=" +
       cityInput.value,
@@ -55,10 +56,11 @@ function produceAttractionsCard(data) {
   let cardContainer = document.querySelector(".cardContainer");
   cardContainer.innerHTML = "";
   //proforate items
-  for (let index = 0; index < 12; index++) {
+  for (let index = 1; index < 13; index++) {
     let attractionImg = document.createElement("img");
     attractionImg.setAttribute("src", `./assets/images/icon${index}.png`);
     attractionImg.classList.add("card-img-top", "rounded");
+    attractionImg.style.height = '300px'
 
     // let card = document.querySelector(".card-body");
     let attractionsName = document.createElement("h5");
@@ -91,14 +93,16 @@ function produceAttractionsCard(data) {
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
     card.style.width = "25rem";
+    let buttonBox = document.createElement("div");
 
     //append
     cardContainer.appendChild(card);
-    card.appendChild(cardBody);
+ 
 
+    card.append(attractionImg, cardBody, buttonBox)
     cardBody.appendChild(attractionsName);
     cardBody.appendChild(attractionType);
     cardBody.appendChild(attractionRating);
-    cardBody.appendChild(wiki);
+    buttonBox.appendChild(wiki);
   }
 }

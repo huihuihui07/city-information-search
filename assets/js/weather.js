@@ -27,6 +27,7 @@ function weatherApi() {
   const location = cityInput.value;
   let queryUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}`;
 
+  $('.weather-card-wrapper').removeClass('hide')
   // console.log(location)
 
   // Use OpenWeather API
@@ -45,6 +46,8 @@ function weatherApi() {
       const forecastWeatherIconHtml = `<div class='weather-card'><img src="${forecastWeatherIcon}" class='icon' alt="weather icon">`;
       cards += `${forecastWeatherIconHtml}<p>${forecastTemperature}°C<p>${forecastWeatherDescription}</p></div>`;
     }
+
+
     // Display forecast
     $(".weather-card-wrapper").html(cards);
   });
