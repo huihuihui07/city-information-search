@@ -7,7 +7,10 @@ var submitForm = document.querySelector(".citySearch");
 
 //display the 3 icons: attractions, restaurants and weather
 searchIcon.addEventListener("click", function () {
-  let selectionBtnText = `<section class='d-flex w-100 justify-content-center'><button id='weather-btn' class='btn btn-light mx-3'>Weather</button><button id='restaurants-btn' class='btn btn-light mx-3'>Restaurants</button><button id='attractions-btn' class='btn btn-light mx-3'>Attractions</button></section>`;
+  let selectionBtnText = `<section class='buttonsAPI d-flex w-100 justify-content-center'>
+  <button id='attractions-btn' class='btn btn-dark btn-lg mx-3'>Attractions</button>
+  <button id='restaurants-btn' class='btn btn-dark btn-lg  mx-3'>Restaurants</button>
+  <button id='weather-btn' class='btn btn-dark btn-lg mx-3'>Weather</button></section>`;
   selectionButtons.innerHTML = selectionBtnText; // Corrected 'innerHTML'
 
   //click on weather button
@@ -23,12 +26,11 @@ searchIcon.addEventListener("click", function () {
   attractionsTab.addEventListener("click", attractionsApi);
 });
 
-
 //clear contents in the api container
-function clearApi(){
+function clearApi() {
   let cardContainer = document.querySelector(".cardContainer");
   cardContainer.innerHTML = "";
 
-  let weatherContainer = document.querySelector( ".weather-card-wrapper");
+  let weatherContainer = document.querySelector(".weather-card-wrapper");
   weatherContainer.innerHTML = "";
 }

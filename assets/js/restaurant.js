@@ -98,7 +98,7 @@ function produceRestaurantCard(data) {
     let address = document.createElement("p");
     address.textContent = `Address: ${data[index].address.street}, ${data[index].address.postalCode} `;
     address.classList.add("card-text");
-
+ //create card element
     let card = document.createElement("div");
     card.classList.add("card", "col-md-4","mx-3", "my-3", 'rounded', 'p-2' );
     card.style.width = "25rem";
