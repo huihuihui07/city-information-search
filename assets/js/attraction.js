@@ -55,31 +55,38 @@ function produceAttractionsCard(data) {
   let cardContainer = document.querySelector(".cardContainer");
   cardContainer.innerHTML = "";
   //proforate items
-  for (let index = 0; index < 9; index++) {
+  for (let index = 0; index < 12; index++) {
     // let card = document.querySelector(".card-body");
     let attractionsName = document.createElement("h5");
     // attractionsName.classList.add("card-title");
     attractionsName.textContent = `Name: ${data[index].properties.name}`;
 
-    let attractionType = document.createElement("div");
-    attractionType.textContent = `Type: ${data[index].properties.kinds} `;
+    let attractionType = document.createElement("p");
+    attractionType.textContent = `Tags:${data[index].properties.kinds}`;
 
-    let attractionRating = document.createElement("div");
-    attractionRating.textContent = `Rating: ${data[index].properties.rate} `;
+    let attractionRating = document.createElement("p");
+    attractionRating.textContent = `Rating: ${data[index].properties.rate}`;
 
     //create card element
     let card = document.createElement("div");
-    card.classList.add("card", "col-md-4");
+    card.classList.add("card", "col-md-4", "mx-3", "my-3", "rounded", "p-2");
+    card.style.width = "25rem";
 
     let wiki = document.createElement("a");
-    wiki.setAttribute("href", 'https://www.wikidata.org/wiki/'+ data[index].properties.wikidata);
-    wiki.setAttribute('target', "_blank")
-    wiki.classList.add("btn", "btn-primary");
+    wiki.setAttribute(
+      "href",
+      "https://www.wikidata.org/wiki/" + data[index].properties.wikidata
+    );
+    wiki.setAttribute("target", "_blank");
+    wiki.classList.add("btn", "btn-secondary");
     wiki.textContent = "WIKI PAGE";
 
     //create card-body element
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
+    card.style.width = "25rem";
+
+    //append
     cardContainer.appendChild(card);
     card.appendChild(cardBody);
 

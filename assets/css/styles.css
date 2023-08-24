@@ -3,11 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+  margin: 0;
+  font-family: "Playfair Display", sans-serif, Arial, sans-serif;
+  color: black;
+  margin-bottom: 3%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Oswald", sans-serif, Arial, sans-serif;
+
+}
+
+p {
+  margin: 0;
+  font-family: "Roboto", sans-serif, Arial, sans-serif;
+}
+
+btn {
+  font-family: "Roboto", sans-serif, Arial, sans-serif;
+}
 
 .home-wrapper {
   height: 100vh;
   background-image: url("../images/mountain.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -16,12 +43,8 @@
   gap: 75px;
 }
 
-.header h1 {
-  text-shadow: 1px 1px 2px rgba(48, 47, 47, 0.5);
-}
-
 .header {
-  color: rgb(247, 120, 17);
+  color: white;
 }
 
 .header h1 {
@@ -29,17 +52,23 @@
   text-align: center;
 }
 
-.header h3 {
+.header h4 {
   text-align: center;
-  font-size: 30px;
+  font-size: 27px;
   margin-top: 30px;
-  color: #2f3d61;
-  text-shadow: #141414;
+  font-weight: 300;
   padding-top: -20px;
+  color: #141414;
+
 }
 
 .col-md-5 {
   border-color: black;
+}
+
+/* api buttons styles */
+.buttonsAPI{
+margin: 20px;
 }
 
 #location {
@@ -63,6 +92,7 @@ input {
   padding: 0px 0px 0px 0px;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0.9;
+
 }
 
 input .weather-tab {
