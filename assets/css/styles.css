@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Oswald", sans-serif, Arial, sans-serif;
 }
 h1 {
   margin: 0;
@@ -16,8 +17,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Oswald", sans-serif, Arial, sans-serif;
-
+  font-family: "Oswald", sans-serif, Arial;
 }
 
 p {
@@ -26,7 +26,7 @@ p {
 }
 
 btn {
-  font-family: "Roboto", sans-serif, Arial, sans-serif;
+  font-family: "Oswald", sans-serif, Arial, sans-serif;
 }
 
 .home-wrapper {
@@ -59,7 +59,6 @@ btn {
   font-weight: 300;
   padding-top: -20px;
   color: #141414;
-
 }
 
 .col-md-5 {
@@ -70,13 +69,14 @@ btn {
   position: relative;
 }
 
-#search, #location {
-  position: absolute;}
+#search,
+#location {
+  position: absolute;
+}
 
 /* api buttons styles */
-.buttonsAPI{
-margin: 20px;
-
+.buttonsAPI {
+  margin: 20px;
 }
 
 #location {
@@ -94,14 +94,27 @@ margin: 20px;
 input {
   width: 100%;
   height: 50px;
-  border-radius: 30px;
+
   border: none;
   text-indent: 40px;
   font-size: 20px;
   padding: 0px 0px 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   opacity: 0.9;
+}
+/* rounded border for two inputs */
+#cityName {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+#country {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
 
+/* rounded corner of all buttons */
+.btn {
+  border-radius: 30px;
 }
 
 input .weather-tab {
