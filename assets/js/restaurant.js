@@ -9,6 +9,7 @@ const optionsRestaurant = {
 
 function restaurantApi() {
   clearApi();
+  document.querySelector('.weather-card-wrapper').classList.add('hide')
   var cityName = cityInput.value;
   var country = countryInput.value;
   console.log(cityName, country);
