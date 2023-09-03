@@ -30,7 +30,7 @@ btn {
 }
 
 .home-wrapper {
-  height: 100vh;
+  height: 90vh;
   background-image: url("../images/mountain.png");
   background-size: cover;
   background-repeat: no-repeat;
