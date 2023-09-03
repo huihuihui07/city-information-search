@@ -9,6 +9,9 @@ const optionsRestaurant = {
 
 function restaurantApi() {
   clearApi();
+  let cardContainer = document.querySelector(".cardContainer");
+  cardContainer.innerHTML =
+    "<div>The restaurant API takes about 10 seconds to load. Please be patient.</div>";
   document.querySelector(".weather-card-wrapper").classList.add("hide");
   var cityName = cityInput.value;
   var country = countryInput.value;
