@@ -1,4 +1,5 @@
-# holiday-app#
+# City-Information-Search
+<img width="957" alt="image" src="https://github.com/huihuihui07/city-information-search/assets/119431383/963882ac-e337-416e-90c3-4a5c48eff077">
 
 ## Project Description
 
@@ -33,7 +34,7 @@ It is responsive i.e can be viewed on mobile and larger screens.
 To use the Holiday App:
 
 ```md
-- Naviagte to the [Holiday App](https://adeolaoye.github.io/holiday-app/) Website.
+- Naviagte to the [Holiday App](https://huihuihui07.github.io/city-information-search/)Website.
 
 - Input a city name into the search area.
 
@@ -48,5 +49,5 @@ To use the Holiday App:
 
 ## Links
 
-- [Live Page](https://adeolaoye.github.io/holiday-app/)
-- [Github Repo](https://github.com/adeolaoye/holiday-app/)
+- [Live Page](https://huihuihui07.github.io/city-information-search/)
+- [Github Repo](https://github.com/huihuihui07/city-information-search)
